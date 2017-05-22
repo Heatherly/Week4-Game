@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystal Collector - Week 4 Game</title>
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+
+</head>
+<body>
+<div class="container ">
+	<div class="row whiteText">
+		<div class="col-md-12">
+		<h1 class="text-center">Crystal Collector Game</h1>
+		<p>You are given a random number at the start of the game.</p>
+		<p>There are four crsytals below. By clicking on a crystal, you will add a specific amount of points to your total score. The value of each crystal is hidden from you until it is clicked.</p>
+		<p>You win the game by matching your total score to the random number. You lose the game if your total score exceeds the random number</p>
+		<p>Each time the game starts, the values of each crystal changes, as does the random number you need to match.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="panel panel-default text-center">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Number to Match:</h3>
+			  </div>
+			  <div class="panel-body">
+			    <div id="randomNumber" class="large-text"></div>
+			  </div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+		<div class="panel panel-default text-center">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Your Total Score:</h3>
+			  </div>
+			  <div class="panel-body">
+			    <div id="yourTotalScore" class="large-text"></div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-9">
+		<div class="panel panel-default">
+  			<div class="panel-body text-center" id="crystalBtn">
+				
+				<button id="crys1" class="crystal1"></button>
+				<button id="crys2" class="crystal2"></button>
+				<button id="crys3" class="crystal3"></button>
+				<button id="crys4" class="crystal4"></button>
+			</div>
+		</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+  				<div class="panel-body">
+					<p>Win: <span id="wins"></span></p>
+					<p>Lose: <span id="loss"></span></p>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
+<footer class="whiteText">
+	&copy;2017 Heather Sosa
+</footer>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

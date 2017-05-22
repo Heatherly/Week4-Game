@@ -1,0 +1,66 @@
+html {position: relative;}
+body {
+	background: url(../images/purplepink.jpg) no-repeat fixed center; 
+	background-size: cover;
+}
+
+.container {
+	background-color: #000;
+	opacity: 0.8;
+	margin-top: 100px;
+	min-height: 400px;
+}
+
+.whiteText {
+	/*opacity: 1;*/
+	color: #fff;
+}
+
+.large-text {
+	font-size: 40px;
+}
+
+.panel-title {
+	font-weight: bold;
+	color: #548;
+}
+.panel {
+	font-weight: bold;
+}
+
+.crystal1{
+	background: url(../images/seablue_crystal.png) no-repeat center;
+	background-size: contain;
+	height: 150px;
+	width: 135px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.crystal2{
+	background: url(../images/emerald.png) no-repeat center;
+	background-size: contain;
+	height: 150px;
+	width: 135px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.crystal3{
+	background: url(../images/orange_crystal.png) no-repeat center;
+	background-size: contain;
+	height: 150px;
+	width: 135px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.crystal4{
+	background: url(../images/pinkblue_emerald.png) no-repeat center;
+	background-size: contain;
+	height: 150px;
+	width: 135px;
+	margin: 10px;
+	border-radius: 5px;
+}
+
+footer {
+	margin-top: 20px;
+	text-align: center;
