@@ -8,7 +8,7 @@ var lose = 0;
 var matchNumber = "";
 var nums = [];
 
-$(function startGame() {
+function startGame() {
 	
 	$("#yourTotalScore").html("_");
 	$("#wins").html(win);
@@ -57,34 +57,40 @@ $(function startGame() {
 		$(".crystal4").append(crystalValue4);
 	}
 
-}); //END OF STARTGAME() FUNCTION
+}; //END OF STARTGAME() FUNCTION
+function gameReset() {
+	nums = [];
+	yourScore = "";
+}
 
+startGame();
 
 $(document).on("click", "button", function() {
-	yourScore = "";
-
-		var crystalBtn = $(this).attr("data-crysValue");
-		console.log(crystalBtn);
-		nums.push(crystalBtn);
+	yourScore = 0;
+	var crystalBtn = $(this).attr("data-crysValue");
+	// console.log(crystalBtn);
+	nums.push(parseInt(crystalBtn));
 		
 for(var i=0; i < nums.length; i++){
-
-    yourScore += parseInt(nums[i]);
-    console.log(nums);
-
-$("#yourTotalScore").html(yourScore);
+    yourScore += nums[i];
+    // console.log(nums);
+	$("#yourTotalScore").html(yourScore);
 }
 
+// Check for win or lose
 if (yourScore===matchNumber) {
-	console.log("You win!");
+	// console.log("You win!");
 	win++;
 	$("#wins").html(win);
-	// startGame();
+	gameReset();
+	startGame();
 }
+
 else if (yourScore > matchNumber) {
-	console.log ("You lose.")
+	// console.log ("You lose.")
 	lose++;
-	//startGame();
+	gameReset();
+	startGame();
 	$("#loss").html(lose);
 }
 
