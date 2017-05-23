@@ -2,17 +2,16 @@ $(document).ready(function() {
 
 //Variables//
 var crys1, crys2, crys3, crys4;
-var yourScore, win, lose;
-var matchNumber = 0;
+var yourScore = 0;
+var win = 0;
+var lose = 0;
+var matchNumber = "";
+var nums = [];
 
 $(function startGame() {
-	yourScore = 0;
+	
 	$("#yourTotalScore").html("_");
-
-	win = 0;
 	$("#wins").html(win);
-
-	lose = 0;
 	$("#loss").html(lose);
 	
 	matchNumber = Math.floor(Math.random() * 120) + 19;
@@ -61,18 +60,34 @@ $(function startGame() {
 }); //END OF STARTGAME() FUNCTION
 
 
+$(document).on("click", "button", function() {
+	yourScore = "";
 
+		var crystalBtn = $(this).attr("data-crysValue");
+		console.log(crystalBtn);
+		nums.push(crystalBtn);
+		
+for(var i=0; i < nums.length; i++){
 
+    yourScore += parseInt(nums[i]);
+    console.log(nums);
 
+$("#yourTotalScore").html(yourScore);
+}
 
+if (yourScore===matchNumber) {
+	console.log("You win!");
+	win++;
+	$("#wins").html(win);
+	// startGame();
+}
+else if (yourScore > matchNumber) {
+	console.log ("You lose.")
+	lose++;
+	//startGame();
+	$("#loss").html(lose);
+}
 
-
-
-
-
-
-
-
-
+}); //end of "on click" 
 
 }); //ending of document.ready()
