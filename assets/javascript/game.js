@@ -8,6 +8,11 @@ var lose = 0;
 var matchNumber = "";
 var nums = [];
 
+function Shuffle(arr) {
+	for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+	return arr;
+};
+
 function startGame() {
 	
 	$("#yourTotalScore").html("_");
@@ -20,44 +25,15 @@ function startGame() {
 //Assign values to crystal buttons//   
 	var values = new Array (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12); 
 
-//Pick Random Value for Crystal 1
-	for (var i = 0; i < values.length; i++) {	
-		randomValues = (Math.floor(Math.random() * values.length), 1)[0];
-		var ri = Math.floor(Math.random() * values.length); // Random Index position in the array
-		var rs = values.splice(ri, 1); // Splice out a random element using the ri var
-			
-		var crystalValue1 = $("#crys1").attr("data-crysValue", +rs);
-		$(".crystal1").append(crystalValue1);
-	}
-
-//Pick Random Value for Crystal 2
-	for (var i = 0; i < values.length; i++) {
-		randomValues = (Math.floor(Math.random() * values.length), 1)[0];
-		var ri = Math.floor(Math.random() * values.length); // Random Index position in the array
-		var rs = values.splice(ri, 1); // Splice out a random element using the ri var
-		var crystalValue2 = $("#crys2").attr("data-crysValue", +rs);
-		$(".crystal2").append(crystalValue2);
-	}
-	
-//Pick Random Value for Crystal 3
-	for (var i = 0; i < values.length; i++) {
-		randomValues = (Math.floor(Math.random() * values.length), 1)[0];
-		var ri = Math.floor(Math.random() * values.length); // Random Index position in the array
-		var rs = values.splice(ri, 1); // Splice out a random element using the ri var
-		var crystalValue3 = $("#crys3").attr("data-crysValue",  +rs);
-		$(".crystal3").append(crystalValue3);
-	}
-
-//Pick Random Value for Crystal 4
-	for (var i = 0; i < values.length; i++) {
-		randomValues = (Math.floor(Math.random() * values.length), 1)[0];
-		var ri = Math.floor(Math.random() * values.length); // Random Index position in the array
-		var rs = values.splice(ri, 1); // Splice out a random element using the ri var
-		var crystalValue4 = $("#crys4").attr("data-crysValue",  +rs);
-		$(".crystal4").append(crystalValue4);
-	}
+	Shuffle(values);
+	console.log(values)
+	$("#crys1").append($(".crystal1").attr("data-crysValue", +values[0]));
+	$("#crys2").append($(".crystal2").attr("data-crysValue", +values[1]));
+	$("#crys3").append($(".crystal3").attr("data-crysValue", +values[2]));
+	$("#crys4").append($(".crystal4").attr("data-crysValue", +values[3]));
 
 }; //END OF STARTGAME() FUNCTION
+
 function gameReset() {
 	nums = [];
 	yourScore = "";
