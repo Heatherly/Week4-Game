@@ -24,13 +24,11 @@ function startGame() {
  
 //Assign values to crystal buttons//   
 	var values = new Array (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12); 
-
-	Shuffle(values);
-	console.log(values)
-	$("#crys1").append($(".crystal1").attr("data-crysValue", +values[0]));
-	$("#crys2").append($(".crystal2").attr("data-crysValue", +values[1]));
-	$("#crys3").append($(".crystal3").attr("data-crysValue", +values[2]));
-	$("#crys4").append($(".crystal4").attr("data-crysValue", +values[3]));
+	var shuffled = Shuffle(values);
+	$('button').each(function (index, element) {
+      // console.log(element, index);
+	  $(element).attr("data-crysValue", +shuffled[index]);   
+	});
 
 }; //END OF STARTGAME() FUNCTION
 
@@ -65,9 +63,9 @@ if (yourScore===matchNumber) {
 else if (yourScore > matchNumber) {
 	// console.log ("You lose.")
 	lose++;
+	$("#loss").html(lose);
 	gameReset();
 	startGame();
-	$("#loss").html(lose);
 }
 
 }); //end of "on click" 
