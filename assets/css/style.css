@@ -31,32 +31,32 @@ body {
 .crystal1{
 	background: url(../images/seablue_crystal.png) no-repeat center;
 	background-size: contain;
-	height: 150px;
-	width: 135px;
+	height: 125px;
+	width: 125px;
 	margin: 10px;
 	border-radius: 5px;
 }
 .crystal2{
 	background: url(../images/emerald.png) no-repeat center;
 	background-size: contain;
-	height: 150px;
-	width: 135px;
+	height: 125px;
+	width: 125px;
 	margin: 10px;
 	border-radius: 5px;
 }
 .crystal3{
 	background: url(../images/orange_crystal.png) no-repeat center;
 	background-size: contain;
-	height: 150px;
-	width: 135px;
+	height: 125px;
+	width: 125px;
 	margin: 10px;
 	border-radius: 5px;
 }
 .crystal4{
 	background: url(../images/pinkblue_emerald.png) no-repeat center;
 	background-size: contain;
-	height: 150px;
-	width: 135px;
+	height: 125px;
+	width: 125px;
 	margin: 10px;
 	border-radius: 5px;
 }
